@@ -1,0 +1,72 @@
+body{
+  background-color: #f5f5f5;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-content: space-around;
+  color: white;
+}
+
+.nav-conta{
+  background-color:#141826;
+}
+
+.sub-main{
+  width: 350px;
+  height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.profile{
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  color: #141826;
+}
+
+.profile div{
+  width: 250px;
+  text-align: center;
+}
+
+.dados{
+  width: 350px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 10px;
+  align-content: center;
+  background-color: #141826;
+  border-radius: 15px;
+}
+
+.dados div{
+  width: 250px;
+  text-align: left;
+}
+
+.transferencia{
+  background-color: #141826;
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-radius: 15px;
+}
+
+.transferencia div{
+  width: 250px;
+  text-align: center;
+}

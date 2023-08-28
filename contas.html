@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="styleConta.css">
+</head>
+<body onload="config()">
+  <header>
+    <nav class="navbar nav-conta" id="nav">
+      <div class="">
+        <a href="index.html" class="navbar m-1 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+    <main>
+      <div class="sub-main">
+        <div class="profile" id="profile">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+          </div>
+          <div>
+            <h2 id="nome"></h2>
+          </div>
+        </div>
+        <div class="dados" id="dados">
+          <h3>Saldo Bancario</h3>
+          <h1>R$ 300 000 000</h1>
+        </div>
+        <div class="transferencia" id="transferencia">
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Transferencia Bancaria</label>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+              <option selected>Selecione Chave Pix</option>
+              <option value="1">Jogador 01</option>
+              <option value="2">Jogador 02</option>
+              <option value="3">Jogador 03</option>
+              <option value="4">Jogador 04</option>
+              <option value="5">Jogador 05</option>
+              <option value="6">Jogador 06</option>
+              <option value="7">Banco Planetario</option>
+            </select>
+            <button class="w-100 btn btn-success">Pix</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+      function config(){
+        var urlParams = new URLSearchParams(window.location.search);
+        var url = urlParams.get("id") // livros
+        var participante = document.getElementById('nome')
+        var profile = document.getElementById('profile')
+        var dados = document.getElementById('dados')
+        var transferencia = document.getElementById('transferencia')
+        var nav = document.getElementById('nav')
+  
+          if(url == '00'){
+            participante.innerHTML = 'Conta Planetaria'
+            profile.style.color = 'gold'
+            dados.style.backgroundColor = 'gold'
+            transferencia.style.backgroundColor = 'gold'
+            nav.style.backgroundColor = 'gold'
+          }
+          else if(url == '01'){
+            participante.innerHTML = 'Participante 01'
+            profile.style.color = 'yellow'
+            dados.style.backgroundColor = 'yellow'
+            transferencia.style.backgroundColor = 'yellow'
+            nav.style.backgroundColor = 'yellow'
+          }
+          else if(url == '02'){
+            participante.innerHTML = 'Participante 02'
+            profile.style.color = 'red'
+            dados.style.backgroundColor = 'red'
+            transferencia.style.backgroundColor = 'red'
+            nav.style.backgroundColor = 'red'
+          }
+          else if(url == '03'){
+            participante.innerHTML = 'Participante 03'
+            profile.style.color = 'blue'
+            dados.style.backgroundColor = 'blue'
+            transferencia.style.backgroundColor = 'blue'
+            nav.style.backgroundColor = 'blue'
+          }
+          else if(url == '04'){
+            participante.innerHTML = 'Participante 04'
+            profile.style.color = 'green'
+            dados.style.backgroundColor = 'green'
+            transferencia.style.backgroundColor = 'green'
+            nav.style.backgroundColor = 'green'
+          }
+          else if(url == '05'){
+            participante.innerHTML = 'Participante 05'
+            profile.style.color = 'gray'
+            dados.style.backgroundColor = 'gray'
+            transferencia.style.backgroundColor = 'gray'
+            nav.style.backgroundColor = 'gray'
+          }
+          else if(url == '06'){
+            participante.innerHTML = 'Participante 06'
+            profile.style.color = 'lightblue'
+            dados.style.backgroundColor = 'lightblue'
+            transferencia.style.backgroundColor = 'lightblue'
+            nav.style.backgroundColor = 'lightblue'
+          }
+  
+      }
+    </script>
+</body>
+</html>

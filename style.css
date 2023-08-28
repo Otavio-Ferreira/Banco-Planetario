@@ -1,0 +1,22 @@
+body{
+  background-color: #f5f5f5;
+}
+
+header{
+  background-color: #000000;
+}
+
+.sub-nav{
+  background-color: #141826;
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+}
+
+.main{
+  background-color: #141826;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px auto;
+}
