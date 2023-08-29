@@ -35,88 +35,30 @@
         </div>
         <div class="dados" id="dados">
           <h3>Saldo Bancario</h3>
-          <h1>R$ 300 000 000</h1>
+          <h1 id="saldo"></h1>
         </div>
         <div class="transferencia" id="transferencia">
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Transferencia Bancaria</label>
-            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+            <div class="mb-3">
+              <input type="number" class="form-control" id="valor" placeholder="Ex. 2.000">
+            </div>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="chave">
               <option selected>Selecione Chave Pix</option>
-              <option value="1">Jogador 01</option>
-              <option value="2">Jogador 02</option>
-              <option value="3">Jogador 03</option>
-              <option value="4">Jogador 04</option>
-              <option value="5">Jogador 05</option>
-              <option value="6">Jogador 06</option>
-              <option value="7">Banco Planetario</option>
+              <option value="Jogador-01">Jogador-01</option>
+              <option value="Jogador-02">Jogador-02</option>
+              <option value="Jogador-03">Jogador-03</option>
+              <option value="Jogador-04">Jogador-04</option>
+              <option value="Jogador-05">Jogador-05</option>
+              <option value="Jogador-06">Jogador-06</option>
+              <option value="Banco-Planetario">Banco-Planetario</option>
             </select>
-            <button class="w-100 btn btn-success">Pix</button>
+            <button class="w-100 btn btn-success" onclick="pix()">Pix</button>
           </div>
         </div>
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script>
-      function config(){
-        var urlParams = new URLSearchParams(window.location.search);
-        var url = urlParams.get("id") // livros
-        var participante = document.getElementById('nome')
-        var profile = document.getElementById('profile')
-        var dados = document.getElementById('dados')
-        var transferencia = document.getElementById('transferencia')
-        var nav = document.getElementById('nav')
-  
-          if(url == '00'){
-            participante.innerHTML = 'Conta Planetaria'
-            profile.style.color = 'gold'
-            dados.style.backgroundColor = 'gold'
-            transferencia.style.backgroundColor = 'gold'
-            nav.style.backgroundColor = 'gold'
-          }
-          else if(url == '01'){
-            participante.innerHTML = 'Participante 01'
-            profile.style.color = 'yellow'
-            dados.style.backgroundColor = 'yellow'
-            transferencia.style.backgroundColor = 'yellow'
-            nav.style.backgroundColor = 'yellow'
-          }
-          else if(url == '02'){
-            participante.innerHTML = 'Participante 02'
-            profile.style.color = 'red'
-            dados.style.backgroundColor = 'red'
-            transferencia.style.backgroundColor = 'red'
-            nav.style.backgroundColor = 'red'
-          }
-          else if(url == '03'){
-            participante.innerHTML = 'Participante 03'
-            profile.style.color = 'blue'
-            dados.style.backgroundColor = 'blue'
-            transferencia.style.backgroundColor = 'blue'
-            nav.style.backgroundColor = 'blue'
-          }
-          else if(url == '04'){
-            participante.innerHTML = 'Participante 04'
-            profile.style.color = 'green'
-            dados.style.backgroundColor = 'green'
-            transferencia.style.backgroundColor = 'green'
-            nav.style.backgroundColor = 'green'
-          }
-          else if(url == '05'){
-            participante.innerHTML = 'Participante 05'
-            profile.style.color = 'gray'
-            dados.style.backgroundColor = 'gray'
-            transferencia.style.backgroundColor = 'gray'
-            nav.style.backgroundColor = 'gray'
-          }
-          else if(url == '06'){
-            participante.innerHTML = 'Participante 06'
-            profile.style.color = 'lightblue'
-            dados.style.backgroundColor = 'lightblue'
-            transferencia.style.backgroundColor = 'lightblue'
-            nav.style.backgroundColor = 'lightblue'
-          }
-  
-      }
-    </script>
+    <script src="js/conta.js"></script>
 </body>
 </html>
